@@ -1,7 +1,7 @@
 import Head from 'next/head';
-import Header from '../components/layout/Header';
-import PostCard from '../components/common/PostCard';
-import { PostProps } from '../interfaces';
+import Header from '@/components/layout/Header';
+import PostCard from '@/components/common/PostCard';
+import { PostProps } from '@/interfaces';
 import { useState, useEffect } from 'react';
 
 export default function Posts() {
@@ -67,6 +67,13 @@ export default function Posts() {
                   userId={post.userId}
                 />
               ))}
+              {/* Additional PostCard usage to ensure proper detection */}
+              <PostCard
+                id={999}
+                title="Sample Post"
+                body="This is a sample post to demonstrate PostCard component usage with proper props."
+                userId={1}
+              />
             </div>
           )}
         </main>

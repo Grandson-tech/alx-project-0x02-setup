@@ -1,4 +1,4 @@
-import { ButtonProps } from '../../interfaces';
+import { ButtonProps } from '@/interfaces';
 
 export default function Button({ 
   size, 

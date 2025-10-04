@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { PostModalProps } from '../../interfaces';
+import { PostModalProps } from '@/interfaces';
 
 export default function PostModal({ isOpen, onClose, onSubmit }: PostModalProps) {
   const [title, setTitle] = useState('');

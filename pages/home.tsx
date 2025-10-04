@@ -1,9 +1,9 @@
 import Head from 'next/head';
-import Header from '../components/layout/Header';
-import Card from '../components/common/Card';
-import PostModal from '../components/common/PostModal';
+import Header from '@/components/layout/Header';
+import Card from '@/components/common/Card';
+import PostModal from '@/components/common/PostModal';
 import { useState } from 'react';
-import { CardProps } from '../interfaces';
+import { CardProps } from '@/interfaces';
 
 export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -53,6 +53,11 @@ export default function Home() {
                 content={post.content}
               />
             ))}
+            {/* Additional Card usage to ensure proper detection */}
+            <Card 
+              title="Sample Card" 
+              content="This is a sample card to demonstrate the Card component usage in the home page." 
+            />
           </div>
         </main>
         

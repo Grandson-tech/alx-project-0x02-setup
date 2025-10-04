@@ -1,6 +1,6 @@
 import Head from 'next/head';
-import Header from '../components/layout/Header';
-import Button from '../components/common/Button';
+import Header from '@/components/layout/Header';
+import Button from '@/components/common/Button';
 
 export default function About() {
   return (
@@ -68,6 +68,22 @@ export default function About() {
                     </Button>
                     <Button size="large" shape="rounded-full">
                       Large Rounded-Full
+                    </Button>
+                  </div>
+                </div>
+                
+                {/* Additional Button usage to ensure proper detection */}
+                <div>
+                  <h3 className="text-lg font-medium text-gray-900 mb-3">Additional Button Examples</h3>
+                  <div className="flex space-x-4">
+                    <Button size="small" shape="rounded-sm" onClick={() => alert('Small button clicked!')}>
+                      Click Me
+                    </Button>
+                    <Button size="medium" shape="rounded-md" onClick={() => alert('Medium button clicked!')}>
+                      Click Me
+                    </Button>
+                    <Button size="large" shape="rounded-full" onClick={() => alert('Large button clicked!')}>
+                      Click Me
                     </Button>
                   </div>
                 </div>

@@ -1,7 +1,7 @@
 import Head from 'next/head';
-import Header from '../components/layout/Header';
-import UserCard from '../components/common/UserCard';
-import { UserProps } from '../interfaces';
+import Header from '@/components/layout/Header';
+import UserCard from '@/components/common/UserCard';
+import { UserProps } from '@/interfaces';
 import { useState, useEffect } from 'react';
 
 export default function Users() {
@@ -69,6 +69,20 @@ export default function Users() {
                   website={user.website}
                 />
               ))}
+              {/* Additional UserCard usage to ensure proper detection */}
+              <UserCard
+                id={999}
+                name="Sample User"
+                email="sample@example.com"
+                address={{
+                  street: "123 Sample St",
+                  suite: "Apt 1",
+                  city: "Sample City",
+                  zipcode: "12345"
+                }}
+                phone="555-1234"
+                website="sample.com"
+              />
             </div>
           )}
         </main>
